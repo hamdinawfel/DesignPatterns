@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Factories\Point;cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Factories\Point.cs" />
+  </ItemGroup>
+
 </Project>

@@ -1,13 +1,16 @@
 ﻿using DesignPatterns.Factories;
 using DesignPatterns.Utils;
+using static DesignPatterns.Factories.HotDrinkMachine;
 
-var factoroyDemo = new FactoryDemo();
+var pointFactroyDemo = new PointFactroyDemo();
 var trackingThemeFactoryDemo = new TrackingThemeFactoryDemo();
+var hotDrinkMachineDemo = new HotDrinkMachineDemo();
 
 var demos = new List<IDemo>()
 {
-	factoroyDemo,
+    pointFactroyDemo,
     trackingThemeFactoryDemo,
+    hotDrinkMachineDemo
 };
 
 

@@ -5,13 +5,15 @@ var pointFactroyDemo = new PointFactroyDemo();
 var trackingThemeFactoryDemo = new TrackingThemeFactoryDemo();
 var hotDrinkMachineDemo = new HotDrinkMachineDemo();
 var personFactoryDemo = new PersonFactoryDemo();
+var creditCardDemo = new CreditCardDemo();
 
 var demos = new List<IDemo>()
 {
     pointFactroyDemo,
     trackingThemeFactoryDemo,
     hotDrinkMachineDemo,
-    personFactoryDemo
+    personFactoryDemo,
+    creditCardDemo
 };
 
 

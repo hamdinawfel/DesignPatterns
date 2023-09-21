@@ -47,16 +47,6 @@ namespace DesignPatterns.Factories
     {
         private double x, y;
 
-        public static Point PointWithCartisienCoordinate(double x, double y)
-        {
-            return new Point(x, y);
-        }
-
-        public static Point PointWithPolarCoordinate(double rho, double teta)
-        {
-            return new Point(rho * Math.Cos(teta), rho * Math.Sin(teta));
-        }
-
         private Point(double x, double y)
         {
             this.x = x;
@@ -67,13 +57,26 @@ namespace DesignPatterns.Factories
         {
             return $"{nameof(x)} : {x}, {nameof(y)} : {y}";
         }
+
+        public static class Factory
+        {
+            public static Point NewCartisienCoordinate(double x, double y)
+            {
+                return new Point(x, y);
+            }
+
+            public static Point NewPolarCoordinate(double rho, double teta)
+            {
+                return new Point(rho * Math.Cos(teta), rho * Math.Sin(teta));
+            }
+        }
     }
 
     public class FactoryDemo : IDemo
     {
         public void DisplayResult()
         {
-            var a =  Point.PointWithPolarCoordinate(1.0, Math.PI /2);
+            var a =  Point.Factory.NewPolarCoordinate(1.0, Math.PI /2);
             Console.WriteLine(a);
 
             var b = new PointWithoutFactoryMethod(1.0, Math.PI / 2, PointWithoutFactoryMethod.CoordinateSystem.Polar);

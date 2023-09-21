@@ -63,18 +63,11 @@ namespace DesignPatterns.Factories
         }
     }
 
-    public class CreditCardDemo : IDemo
+    public class CreditCardFactory
     {
-        public void DisplayResult()
+        public static ICreditCard GetCreditCard(string cardType)
         {
-            //Generally we will get the Card Type from UI.
-            //Here we are hardcoded the card type
-            string cardType = "MoneyBack";
-
             ICreditCard cardDetails = null;
-
-            //Based of the CreditCard Type we are creating the
-            //appropriate type instance using if else condition
             if (cardType == "MoneyBack")
             {
                 cardDetails = new MoneyBack();
@@ -87,6 +80,15 @@ namespace DesignPatterns.Factories
             {
                 cardDetails = new Platinum();
             }
+            return cardDetails;
+        }
+    }
+
+    public class CreditCardDemo : IDemo
+    {
+        public void DisplayResult()
+        {
+            ICreditCard cardDetails = CreditCardFactory.GetCreditCard("Platinum");
 
             if (cardDetails != null)
             {
@@ -98,7 +100,6 @@ namespace DesignPatterns.Factories
             {
                 Console.Write("Invalid Card Type");
             }
-
             Console.ReadLine();
         }
     }

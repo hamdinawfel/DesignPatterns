@@ -70,15 +70,10 @@ namespace DesignPatterns.CharpTopics._1_Reflexion
 
             foreach(var propertyInfo in propertyInfos)
             {
-
-                var customAttributes = propertyInfo.CustomAttributes;
-                foreach(var customAttribute in customAttributes)
-                {
-                    var attribute = propertyInfo.GetCustomAttributes(typeof(DisplayNameAttribute), true)
-                    .Cast<DisplayNameAttribute>().Single();
-                    string displayName = attribute.DisplayName;
-                    Console.WriteLine(displayName);
-                }
+                var attribute = propertyInfo.GetCustomAttributes(typeof(DisplayNameAttribute), true)
+                                   .Cast<DisplayNameAttribute>().Single();
+                string displayName = attribute.DisplayName;
+                Console.WriteLine(displayName);
             }
         }
     }

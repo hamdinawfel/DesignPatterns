@@ -7,9 +7,16 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Prototype.PrototypeInheritance
 {
-    public interface IDeepProtyable<T>
+    public interface IDeepProtyable<T>  where T : new()
     {
-        T DeepCopy();
+        void CopyTo(T target);
+
+        public T DeepCopy()
+        {
+            T t = new T();
+            CopyTo(t);
+            return t;
+        }
     }
 
     public class Person : IDeepProtyable<Person>
@@ -32,9 +39,10 @@ namespace DesignPatterns.Prototype.PrototypeInheritance
                    $"{nameof(Address)} : {Address}";
         }
 
-        public Person DeepCopy()
+        public void CopyTo(Person target)
         {
-            return new Person((string[])Names.Clone(), Address.DeepCopy());
+            target.Names = (string[])Names.Clone();
+            target.Address = ((IDeepProtyable<Address>)Address).DeepCopy();
         }
     }
     public class Address : IDeepProtyable<Address>
@@ -56,9 +64,10 @@ namespace DesignPatterns.Prototype.PrototypeInheritance
                    $"{nameof(HouseNumber)} : {HouseNumber}";
         }
 
-        public Address DeepCopy()
+        public void CopyTo(Address target)
         {
-            return (Address)MemberwiseClone();
+            target.ScreetName = ScreetName;
+            target.HouseNumber = HouseNumber;
         }
     }
 
@@ -80,9 +89,18 @@ namespace DesignPatterns.Prototype.PrototypeInheritance
             return $"{base.ToString()}, {nameof(Salary)}: {Salary}";
         }
 
-        public Emplyee DeepCopy()
+        public void CopyTo(Emplyee target)
         {
-            return new Emplyee((string[])Names.Clone(), Address.DeepCopy(), Salary);
+            target.Salary = Salary;
+            base.CopyTo(target);
+        }
+    }
+
+   public static class ExtensionMethods
+    {
+        public static T DeepCopy<T>(this T person) where T : Person, new()
+        {
+            return ((IDeepProtyable<T>)person).DeepCopy();
         }
     }
     public class PrototypeInheritanceDemo : IDisplayDemo

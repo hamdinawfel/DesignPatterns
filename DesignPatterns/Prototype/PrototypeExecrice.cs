@@ -7,22 +7,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Prototype
 {
-    public interface IProtype<T>
-    {
-        T DeepCopy();
-    }
-    public class Point : IProtype<Point>
+    public class Point
     {
         public int X, Y;
-        public Point(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-        public Point DeepCopy()
-        {
-            return new Point(X, Y);
-        }
 
         public override string ToString()
         {
@@ -34,14 +21,11 @@ namespace DesignPatterns.Prototype
     {
         public Point Start, End;
 
-        public Line(Point start, Point end)
-        {
-            Start = start;
-            End = end;
-        }
         public Line DeepCopy()
         {
-            return new Line(Start.DeepCopy(), End.DeepCopy());
+            var newStart = new Point { X = Start.X, Y = Start.Y };
+            var newEnd = new Point { X = End.X, Y = End.Y };
+            return new Line { Start = newStart, End = newEnd };
         }
 
         public override string ToString()
@@ -53,14 +37,15 @@ namespace DesignPatterns.Prototype
     {
         public void DisplayResult()
         {
-            var startPoint = new Point(0, 0);
-            var endPoint = new Point(1, 1);
 
-            var line1 = new Line(startPoint, endPoint);
-            var line2 = line1.DeepCopy();
+            var line1 = new Line
+            {
+                Start = new Point { X = 3, Y = 3 },
+                End = new Point { X = 10, Y = 10 }
+            };
             Console.WriteLine(line1);
-
-            line2.Start = new Point(2, 2);
+            var line2 = line1.DeepCopy();
+            line2.End = new Point { X = 20, Y = 30 };
 
             Console.WriteLine(line1);
             Console.WriteLine(line2);

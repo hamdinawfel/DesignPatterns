@@ -42,7 +42,7 @@ namespace DesignPatterns.Prototype.PrototypeInheritance
         public void CopyTo(Person target)
         {
             target.Names = (string[])Names.Clone();
-            target.Address = ((IDeepProtyable<Address>)Address).DeepCopy();
+            target.Address = Address.DeepCopy();
         }
     }
     public class Address : IDeepProtyable<Address>
@@ -98,6 +98,10 @@ namespace DesignPatterns.Prototype.PrototypeInheritance
 
    public static class ExtensionMethods
     {
+        public static T DeepCopy<T>(this IDeepProtyable<T> item) where T : new()
+        {
+            return item.DeepCopy();
+        }
         public static T DeepCopy<T>(this T person) where T : Person, new()
         {
             return ((IDeepProtyable<T>)person).DeepCopy();

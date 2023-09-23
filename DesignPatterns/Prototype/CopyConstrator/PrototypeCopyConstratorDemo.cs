@@ -5,19 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Prototype
+namespace DesignPatterns.Prototype.CopyConstrator
 {
-    public interface IProtype<T>
+    public class Person
     {
-        T DeepCopy();
-    }
-
-    public class Person : IProtype<Person>
-    {
-        public List<string> Names { get; set; }
+        public string[] Names { get; set; }
         public Address Address { get; set; }
 
-        public Person(List<string> names, Address address)
+        public Person(string[] names, Address address)
         {
             Names = names;
             Address = address;
@@ -30,15 +25,10 @@ namespace DesignPatterns.Prototype
         }
         public override string ToString()
         {
-            return $"{nameof(Names)} : {string.Join(" ",Names)}, {nameof(Address)} : {Address}";
-        }
-
-        public Person DeepCopy()
-        {
-            return new Person(Names, Address.DeepCopy());
+            return $"{nameof(Names)} : {string.Join(" ", Names)}, {nameof(Address)} : {Address}";
         }
     }
-    public class Address : IProtype<Address>
+    public class Address
     {
         public string ScreetName { get; set; }
         public int HouseNumber { get; set; }
@@ -57,23 +47,17 @@ namespace DesignPatterns.Prototype
         {
             return $"{nameof(ScreetName)} : {ScreetName}, {nameof(HouseNumber)} : {HouseNumber}";
         }
-
-        public Address DeepCopy()
-        {
-            return new Address(ScreetName, HouseNumber);
-        }
     }
-
-    public class PrototypeDemo : IDisplayDemo
+    public class PrototypeCopyConstratorDemo : IDisplayDemo
     {
         public void DisplayResult()
         {
-            var nawfel = new Person(new List<string>() { "Nawfel", "Hamdi" }, new Address("Cite Khad", 123));
+            var nawfel = new Person(new string[] { "Nawfel", "Hamdi" }, new Address("Cite Khad", 123));
             Console.WriteLine(nawfel);
 
-            var jan = nawfel.DeepCopy();
+            var jan = new Person(nawfel);
 
-            jan.Names = new List<string> { "Jan", "jho" };
+            jan.Names = new string[] { "Jan", "jho" };
             jan.Address.HouseNumber = 0;
             Console.WriteLine(jan);
             Console.WriteLine(nawfel);

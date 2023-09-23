@@ -100,7 +100,6 @@ namespace DesignPatterns.Factories
             {
                 Console.Write("Invalid Card Type");
             }
-            Console.ReadLine();
         }
     }
 }

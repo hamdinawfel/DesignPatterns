@@ -16,6 +16,7 @@ var creditCardDemo = new CreditCardDemo();
 var prototypeCopyConstratorDemo = new PrototypeCopyConstratorDemo();
 var prototypeWithDeepCopyInterfaceDemo = new PrototypeWithDeepCopyInterfaceDemo();
 var prototypeInheritanceDemo = new PrototypeInheritanceDemo();
+var prototypeExecrice = new PrototypeExecrice();
 
 var demos = new List<IDisplayDemo>()
 {
@@ -27,7 +28,8 @@ var demos = new List<IDisplayDemo>()
 
     prototypeCopyConstratorDemo,
     prototypeWithDeepCopyInterfaceDemo,
-    prototypeInheritanceDemo
+    prototypeInheritanceDemo,
+    prototypeExecrice
 };
 
 

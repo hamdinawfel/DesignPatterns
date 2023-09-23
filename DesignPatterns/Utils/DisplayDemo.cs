@@ -1,10 +1,10 @@
 ﻿namespace DesignPatterns.Utils
 {
-    public class Demo
+    public class DisplayDemo
     {
-        private readonly IEnumerable<IDemo> _demos;
+        private readonly IEnumerable<IDisplayDemo> _demos;
         private const string DEMO_SEPERATOR = "-----------------------------";
-        public Demo(IEnumerable<IDemo> demos)
+        public DisplayDemo(IEnumerable<IDisplayDemo> demos)
         {
             _demos = demos;
         }

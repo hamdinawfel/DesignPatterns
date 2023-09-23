@@ -94,7 +94,7 @@ namespace DesignPatterns.Factories
         }
     }
 
-    public class TrackingThemeFactoryDemo : IDemo
+    public class TrackingThemeFactoryDemo : IDisplayDemo
     {
         public void DisplayResult()
         {

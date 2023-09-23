@@ -31,7 +31,7 @@ namespace DesignPatterns.Factories
             return person;
         }
     }
-    public class PersonFactoryDemo : IDemo
+    public class PersonFactoryDemo : IDisplayDemo
     {
         public void DisplayResult()
         {

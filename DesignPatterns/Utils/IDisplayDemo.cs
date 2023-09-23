@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.Utils
 {
-    public interface IDemo
+    public interface IDisplayDemo
     {
         void DisplayResult();
     }

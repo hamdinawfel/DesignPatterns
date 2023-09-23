@@ -84,7 +84,7 @@ namespace DesignPatterns.Factories
         }
     }
 
-    public class CreditCardDemo : IDemo
+    public class CreditCardDemo : IDisplayDemo
     {
         public void DisplayResult()
         {

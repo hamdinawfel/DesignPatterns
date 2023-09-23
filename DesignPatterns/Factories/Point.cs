@@ -72,7 +72,7 @@ namespace DesignPatterns.Factories
         }
     }
 
-    public class PointFactroyDemo : IDemo
+    public class PointFactroyDemo : IDisplayDemo
     {
         public void DisplayResult()
         {

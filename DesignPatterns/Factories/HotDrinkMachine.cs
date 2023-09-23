@@ -77,7 +77,7 @@ namespace DesignPatterns.Factories
         }
     }
 
-    public class HotDrinkMachineDemo : IDemo
+    public class HotDrinkMachineDemo : IDisplayDemo
         {
             public void DisplayResult()
             {

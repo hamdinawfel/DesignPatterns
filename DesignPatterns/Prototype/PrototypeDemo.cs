@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Prototype
 {
-    public class Person
+    public interface IProtype<T>
+    {
+        T DeepCopy();
+    }
+
+    public class Person : IProtype<Person>
     {
         public List<string> Names { get; set; }
         public Address Address { get; set; }
@@ -27,8 +32,13 @@ namespace DesignPatterns.Prototype
         {
             return $"{nameof(Names)} : {string.Join(" ",Names)}, {nameof(Address)} : {Address}";
         }
+
+        public Person DeepCopy()
+        {
+            return new Person(Names, Address.DeepCopy());
+        }
     }
-    public class Address
+    public class Address : IProtype<Address>
     {
         public string ScreetName { get; set; }
         public int HouseNumber { get; set; }
@@ -38,14 +48,19 @@ namespace DesignPatterns.Prototype
             HouseNumber = houseNumber;
         }
 
-        public Address(Address otherAddress)
+        public Address(Address other)
         {
-            ScreetName = otherAddress.ScreetName;
-            HouseNumber = otherAddress.HouseNumber;
+            ScreetName = other.ScreetName;
+            HouseNumber = other.HouseNumber;
         }
         public override string ToString()
         {
             return $"{nameof(ScreetName)} : {ScreetName}, {nameof(HouseNumber)} : {HouseNumber}";
+        }
+
+        public Address DeepCopy()
+        {
+            return new Address(ScreetName, HouseNumber);
         }
     }
 
@@ -56,7 +71,8 @@ namespace DesignPatterns.Prototype
             var nawfel = new Person(new List<string>() { "Nawfel", "Hamdi" }, new Address("Cite Khad", 123));
             Console.WriteLine(nawfel);
 
-            var jan = new Person(nawfel);
+            var jan = nawfel.DeepCopy();
+
             jan.Names = new List<string> { "Jan", "jho" };
             jan.Address.HouseNumber = 0;
             Console.WriteLine(jan);

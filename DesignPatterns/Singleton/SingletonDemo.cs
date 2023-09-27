@@ -4,11 +4,11 @@ using System.Reflection;
 
 namespace DesignPatterns.Singleton
 {
-    public interface ISingletonDatabase
+    public interface IDatabase
     {
         int GetPopulation(string capital);
     }
-    public class SingletonDatabase : ISingletonDatabase
+    public class SingletonDatabase : IDatabase
     {
         private readonly Dictionary<string, int> populations = new Dictionary<string, int>();
 
@@ -49,7 +49,7 @@ namespace DesignPatterns.Singleton
             return populations[capital];
         }
 
-        
+       
     }
 
     public class TotalCapitalFinder
@@ -61,7 +61,25 @@ namespace DesignPatterns.Singleton
             {
                 result += SingletonDatabase.Instance.GetPopulation(name);
             }
+            return result;
+        }
+    }
 
+    public class ConfigurablePopulationFinder
+    {
+        private readonly IDatabase database;
+        public ConfigurablePopulationFinder(IDatabase database)
+        {
+            this.database = database;
+        }
+
+        public int GetTotalPopulation(IEnumerable<string> names)
+        {
+            int result = 0;
+            foreach (var name in names)
+            {
+                result += database.GetPopulation(name);
+            }
             return result;
         }
     }
@@ -72,7 +90,7 @@ namespace DesignPatterns.Singleton
             var db = SingletonDatabase.Instance;
             var capital = "New York";
             var population =  db.GetPopulation(capital);
-            Console.WriteLine($"The population for {capital} is : {population}");
+            Console.WriteLine($"The population in this city {capital} is : {population}");
         }
     }
 }

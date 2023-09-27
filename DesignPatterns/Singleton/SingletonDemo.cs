@@ -36,8 +36,8 @@ namespace DesignPatterns.Singleton
             }
         }
 
-        private static SingletonDatabase instance = new SingletonDatabase();
-        public static SingletonDatabase Instance => instance;
+        private static Lazy<SingletonDatabase> instance = new Lazy<SingletonDatabase>(() => new SingletonDatabase());
+        public static SingletonDatabase Instance => instance.Value;
 
         public string GetPopulation(string capital)
         {
@@ -49,7 +49,9 @@ namespace DesignPatterns.Singleton
     {
         public void DisplayResult()
         {
-            var population =  SingletonDatabase.Instance.GetPopulation("New York");
+            var db = SingletonDatabase.Instance;
+            var capital = "New York";
+            var population =  db.GetPopulation(capital);
             Console.WriteLine(population);
         }
     }

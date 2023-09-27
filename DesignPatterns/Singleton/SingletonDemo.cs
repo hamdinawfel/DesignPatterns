@@ -52,7 +52,7 @@ namespace DesignPatterns.Singleton
        
     }
 
-    public class TotalCapitalFinder
+    public class TotalPopulationFinder
     {
         public int GetTotalPopulation(IEnumerable<string> names)
         {
@@ -81,6 +81,41 @@ namespace DesignPatterns.Singleton
                 result += database.GetPopulation(name);
             }
             return result;
+        }
+    }
+
+
+    public class OrdirnaryDatabase : IDatabase
+    {
+        private readonly Dictionary<string, int> populations;
+        public OrdirnaryDatabase()
+        {
+            Console.WriteLine("Database initialization");
+
+            var assembly = typeof(SingletonDatabase).Assembly;
+            var filePath = Path.Combine(Path.GetDirectoryName(assembly.Location), "Singleton", "capitals.txt");
+
+            var content = File.ReadAllLines(filePath);
+            var currentCity = String.Empty;
+
+            foreach (var line in content)
+            {
+                var isNumber = int.TryParse(line, out int population);
+                if (isNumber && !string.IsNullOrEmpty(currentCity))
+                {
+                    populations[currentCity] = population;
+                    currentCity = String.Empty;
+                }
+                else
+                {
+                    currentCity = line.Trim();
+                }
+            }
+        }
+
+        public int GetPopulation(string capital)
+        {
+            return populations[capital];
         }
     }
     public class SingletonDemo : IDisplayDemo

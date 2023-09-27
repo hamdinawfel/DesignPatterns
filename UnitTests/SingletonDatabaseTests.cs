@@ -1,5 +1,6 @@
 
 
+using Autofac;
 using DesignPatterns.Singleton;
 
 namespace UnitTests
@@ -22,8 +23,8 @@ namespace UnitTests
         {
             var names = new [] { "New York", "Tokyo" };
 
-            var tf = new TotalCapitalFinder();
-            var result = tf.GetTotalPopulation(names);
+            var totalPopulationFinder = new TotalPopulationFinder();
+            var result = totalPopulationFinder.GetTotalPopulation(names);
 
             Assert.That(result, Is.EqualTo(17800000 + 33200000));
         }
@@ -46,12 +47,32 @@ namespace UnitTests
         {
             var mokedData = new DummyData();
 
-            var pf = new ConfigurablePopulationFinder(mokedData);
+            var populationFinder = new ConfigurablePopulationFinder(mokedData);
 
             var names = new[] { "a", "b" };
-            var result = pf.GetTotalPopulation(names);
+            var result = populationFinder.GetTotalPopulation(names);
 
             Assert.That(result, Is.EqualTo(3));
+        }
+
+        [Test]
+        public void DIOrdirnaryDatabaseTest()
+        {
+            var containerBuiler = new ContainerBuilder();
+            containerBuiler.RegisterType<OrdirnaryDatabase>()
+                .As<IDatabase>()
+                .SingleInstance();
+            containerBuiler.RegisterType<TotalPopulationFinder>();
+
+            using (var c = containerBuiler.Build())
+            {
+                var totalPopulationFinder = c.Resolve<TotalPopulationFinder>();
+                var names = new[] { "New York", "Tokyo" };
+                var result = totalPopulationFinder.GetTotalPopulation(names);
+
+                Assert.That(result, Is.EqualTo(17800000 + 33200000));
+            }
+
         }
     }
 }

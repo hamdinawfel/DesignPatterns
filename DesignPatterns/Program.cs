@@ -4,6 +4,7 @@ using DesignPatterns.Prototype;
 using DesignPatterns.Prototype.CopyConstrator;
 using DesignPatterns.Prototype.DeepCopyInterface;
 using DesignPatterns.Prototype.PrototypeInheritance;
+using DesignPatterns.Singleton;
 using DesignPatterns.Utils;
 using System.Collections.Generic;
 
@@ -18,18 +19,22 @@ var prototypeWithDeepCopyInterfaceDemo = new PrototypeWithDeepCopyInterfaceDemo(
 var prototypeInheritanceDemo = new PrototypeInheritanceDemo();
 var prototypeExecrice = new PrototypeExecrice();
 
+var singletionDemo = new SingletonDemo();
+
 var demos = new List<IDisplayDemo>()
 {
-    pointFactroyDemo,
-    trackingThemeFactoryDemo,
-    hotDrinkMachineDemo,
-    personFactoryDemo,
-    creditCardDemo,
+    //pointFactroyDemo,
+    //trackingThemeFactoryDemo,
+    //hotDrinkMachineDemo,
+    //personFactoryDemo,
+    //creditCardDemo,
 
-    prototypeCopyConstratorDemo,
-    prototypeWithDeepCopyInterfaceDemo,
-    prototypeInheritanceDemo,
-    prototypeExecrice
+    //prototypeCopyConstratorDemo,
+    //prototypeWithDeepCopyInterfaceDemo,
+    //prototypeInheritanceDemo,
+    //prototypeExecrice,
+
+    singletionDemo
 };
 
 

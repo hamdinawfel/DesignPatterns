@@ -15,4 +15,10 @@
     <None Include="Factories\Point.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Singleton\capitals.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -37,7 +37,7 @@ namespace DesignPatterns.Singleton
         }
 
         private static SingletonDatabase instance = new SingletonDatabase();
-        public static SingletonDatabase Instance = instance;
+        public static SingletonDatabase Instance => instance;
 
         public string GetPopulation(string capital)
         {

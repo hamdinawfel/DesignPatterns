@@ -1,20 +1,25 @@
 ﻿using DesignPatterns.Utils;
+using NUnit.Framework;
 using System.Reflection;
 
 namespace DesignPatterns.Singleton
 {
     public interface ISingletonDatabase
     {
-        string GetPopulation(string capital);
+        int GetPopulation(string capital);
     }
     public class SingletonDatabase : ISingletonDatabase
     {
         private readonly Dictionary<string, int> populations = new Dictionary<string, int>();
-        
+
+        private static int instanceCount;
+        public static int InstanceCount => instanceCount;
         private SingletonDatabase()
         {
+
             Console.WriteLine("Database initialization");
 
+            instanceCount++;
             var assembly = typeof(SingletonDatabase).Assembly;
             var filePath = Path.Combine(Path.GetDirectoryName(assembly.Location), "Singleton", "capitals.txt");
 
@@ -39,12 +44,27 @@ namespace DesignPatterns.Singleton
         private static Lazy<SingletonDatabase> instance = new Lazy<SingletonDatabase>(() => new SingletonDatabase());
         public static SingletonDatabase Instance => instance.Value;
 
-        public string GetPopulation(string capital)
+        public int GetPopulation(string capital)
         {
-            return $"the Population in {capital} is : {populations[capital]}";
+            return populations[capital];
         }
+
+        
     }
 
+    public class TotalCapitalFinder
+    {
+        public int GetTotalPopulation(IEnumerable<string> names)
+        {
+            int result = 0;
+            foreach (var name in names)
+            {
+                result += SingletonDatabase.Instance.GetPopulation(name);
+            }
+
+            return result;
+        }
+    }
     public class SingletonDemo : IDisplayDemo
     {
         public void DisplayResult()
@@ -52,7 +72,7 @@ namespace DesignPatterns.Singleton
             var db = SingletonDatabase.Instance;
             var capital = "New York";
             var population =  db.GetPopulation(capital);
-            Console.WriteLine(population);
+            Console.WriteLine($"The population for {capital} is : {population}");
         }
     }
 }

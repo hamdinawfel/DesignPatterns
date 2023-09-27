@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Singleton\capitals.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

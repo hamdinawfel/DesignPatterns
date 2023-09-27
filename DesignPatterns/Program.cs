@@ -6,6 +6,7 @@ using DesignPatterns.Prototype.DeepCopyInterface;
 using DesignPatterns.Prototype.PrototypeInheritance;
 using DesignPatterns.Singleton;
 using DesignPatterns.Utils;
+using NUnit.Framework;
 using System.Collections.Generic;
 
 var pointFactroyDemo = new PointFactroyDemo();
@@ -23,16 +24,16 @@ var singletionDemo = new SingletonDemo();
 
 var demos = new List<IDisplayDemo>()
 {
-    //pointFactroyDemo,
-    //trackingThemeFactoryDemo,
-    //hotDrinkMachineDemo,
-    //personFactoryDemo,
-    //creditCardDemo,
+    pointFactroyDemo,
+    trackingThemeFactoryDemo,
+    hotDrinkMachineDemo,
+    personFactoryDemo,
+    creditCardDemo,
 
-    //prototypeCopyConstratorDemo,
-    //prototypeWithDeepCopyInterfaceDemo,
-    //prototypeInheritanceDemo,
-    //prototypeExecrice,
+    prototypeCopyConstratorDemo,
+    prototypeWithDeepCopyInterfaceDemo,
+    prototypeInheritanceDemo,
+    prototypeExecrice,
 
     singletionDemo
 };

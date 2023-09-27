@@ -22,6 +22,7 @@ var prototypeExecrice = new PrototypeExecrice();
 
 var singletionDemo = new SingletonDemo();
 var singletonMonostateDemo = new SingletonMonostateDemo();
+var perThreadSingletonDemo = new PerThreadSingletonDemo();
 
 var demos = new List<IDisplayDemo>()
 {
@@ -38,6 +39,7 @@ var demos = new List<IDisplayDemo>()
 
     singletionDemo,
     singletonMonostateDemo,
+    perThreadSingletonDemo,
 };
 
 

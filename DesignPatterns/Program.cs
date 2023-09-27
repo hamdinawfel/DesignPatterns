@@ -21,6 +21,7 @@ var prototypeInheritanceDemo = new PrototypeInheritanceDemo();
 var prototypeExecrice = new PrototypeExecrice();
 
 var singletionDemo = new SingletonDemo();
+var singletonMonostateDemo = new SingletonMonostateDemo();
 
 var demos = new List<IDisplayDemo>()
 {
@@ -35,7 +36,8 @@ var demos = new List<IDisplayDemo>()
     prototypeInheritanceDemo,
     prototypeExecrice,
 
-    singletionDemo
+    singletionDemo,
+    singletonMonostateDemo,
 };
 
 

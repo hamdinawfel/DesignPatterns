@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.CharpTopics._1_Reflexion;
+using DesignPatterns.CharpTopics._2_BaseKeyword;
 using DesignPatterns.Factories;
 using DesignPatterns.Prototype;
 using DesignPatterns.Prototype.CopyConstrator;
@@ -45,11 +46,12 @@ var demos = new List<IDisplayDemo>()
 };
 
 
-var demo = new DisplayDemo(demos);
-demo.Display();
+//var demo = new DisplayDemo(demos);
+//demo.Display();
 
 
 //var executebledemo = new ReflectionDemo();
+var executebledemo = new BaseKeywordDemo();
 
-//var executableDemo = new ExecuteDemo(executebledemo);
-//executableDemo.Execute();
+var executableDemo = new ExecuteDemo(executebledemo);
+executableDemo.Execute();

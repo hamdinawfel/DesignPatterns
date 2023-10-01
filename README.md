@@ -29,3 +29,17 @@ Clone the prototype
 Implement your own deep copy functionality ; or
 Serialize and deserialize
 Customize the resulting instance
+
+## Singletion 
+
+> Singletion : a component which is instantiated only once
+
+Usage:
+- For some components is only make sinse to have one in the system
+ * Database repository
+ * Object Factory
+
+- A constructor call is expensive
+  We only do it once
+  We provide every consumer creating additional copies
+- Need to take care of lazy instantiationand thread saifty

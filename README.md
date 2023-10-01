@@ -1,6 +1,7 @@
 # DesignPatterns
 
-## Factory Design Pattern: TO update
+## Factory
+> Factory Design Pattern. A factory is class will create and deliver objects based on the incoming parameters.
 
 > https://dotnettutorials.net/lesson/factory-design-pattern-csharp/#google_vignette
 

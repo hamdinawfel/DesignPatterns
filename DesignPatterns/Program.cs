@@ -32,6 +32,7 @@ var ambientContextDemo = new AmbientContextDemo();
 var myStringBuilderDemo = new MyStringBuilderDemo();
 var multipleInheritanceDemo = new MultipleInheritanceDemo();
 var multipleInheritanceWithDefaultInterfaceMemberDemo = new MultipleInheritanceWithDefaultInterfaceMemberDemo();
+var dynamicDecoratorCompositionDemo = new DynamicDecoratorCompositionDemo();
 
 var demos = new List<IDisplayDemo>()
 {
@@ -53,7 +54,8 @@ var demos = new List<IDisplayDemo>()
 
     //myStringBuilderDemo,
     multipleInheritanceDemo,
-    multipleInheritanceWithDefaultInterfaceMemberDemo
+    multipleInheritanceWithDefaultInterfaceMemberDemo,
+    dynamicDecoratorCompositionDemo
 };
 
 

@@ -1,5 +1,9 @@
 ﻿using DesignPatterns.CharpTopics._1_Reflexion;
 using DesignPatterns.CharpTopics._2_BaseKeyword;
+using DesignPatterns.CharpTopics._3_Event;
+using DesignPatterns.CharpTopics._4_ConversionOperator;
+using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
+using DesignPatterns.Decorator;
 using DesignPatterns.Factories;
 using DesignPatterns.Prototype;
 using DesignPatterns.Prototype.CopyConstrator;
@@ -25,33 +29,43 @@ var singletionDemo = new SingletonDemo();
 var singletonMonostateDemo = new SingletonMonostateDemo();
 var perThreadSingletonDemo = new PerThreadSingletonDemo();
 var ambientContextDemo = new AmbientContextDemo();
+var myStringBuilderDemo = new MyStringBuilderDemo();
+var multipleInheritanceDemo = new MultipleInheritanceDemo();
+var multipleInheritanceWithDefaultInterfaceMemberDemo = new MultipleInheritanceWithDefaultInterfaceMemberDemo();
 
 var demos = new List<IDisplayDemo>()
 {
-    pointFactroyDemo,
-    trackingThemeFactoryDemo,
-    hotDrinkMachineDemo,
-    personFactoryDemo,
-    creditCardDemo,
+    //pointFactroyDemo,
+    //trackingThemeFactoryDemo,
+    //hotDrinkMachineDemo,
+    //personFactoryDemo,
+    //creditCardDemo,
 
-    prototypeCopyConstratorDemo,
-    prototypeWithDeepCopyInterfaceDemo,
-    prototypeInheritanceDemo,
-    prototypeExecrice,
+    //prototypeCopyConstratorDemo,
+    //prototypeWithDeepCopyInterfaceDemo,
+    //prototypeInheritanceDemo,
+    //prototypeExecrice,
 
-    singletionDemo,
-    singletonMonostateDemo,
-    perThreadSingletonDemo,
-    ambientContextDemo,
+    //singletionDemo,
+    //singletonMonostateDemo,
+    //perThreadSingletonDemo,
+    //ambientContextDemo,
+
+    //myStringBuilderDemo,
+    multipleInheritanceDemo,
+    multipleInheritanceWithDefaultInterfaceMemberDemo
 };
 
 
-//var demo = new DisplayDemo(demos);
-//demo.Display();
+var demo = new DisplayDemo(demos);
+demo.Display();
 
 
 //var executebledemo = new ReflectionDemo();
-var executebledemo = new BaseKeywordDemo();
+//var executebledemo = new BaseKeywordDemo();
+//var executebledemo = new EventDemo();
+//var executebledemo = new ConversionOperatorDemo();
+//var executebledemo = new Demo();
 
-var executableDemo = new ExecuteDemo(executebledemo);
-executableDemo.Execute();
+//var executableDemo = new ExecuteDemo(executebledemo);
+//executableDemo.Execute();

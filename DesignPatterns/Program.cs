@@ -5,6 +5,7 @@ using DesignPatterns.CharpTopics._4_ConversionOperator;
 using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
 using DesignPatterns.Decorator;
 using DesignPatterns.Decorator.MultipleDecoratorResolver;
+using DesignPatterns.Decorator.StaticDecorator;
 using DesignPatterns.Factories;
 using DesignPatterns.Prototype;
 using DesignPatterns.Prototype.CopyConstrator;
@@ -34,6 +35,7 @@ var myStringBuilderDemo = new MyStringBuilderDemo();
 var multipleInheritanceDemo = new MultipleInheritanceDemo();
 var multipleInheritanceWithDefaultInterfaceMemberDemo = new MultipleInheritanceWithDefaultInterfaceMemberDemo();
 var dynamicDecoratorCompositionDemo = new DetectingDecoratorCyclesDemo();
+var staticDecoratorCompositionDemo = new StaticDecoratorCompositionDemo();
 
 var demos = new List<IDisplayDemo>()
 {
@@ -56,7 +58,8 @@ var demos = new List<IDisplayDemo>()
     //myStringBuilderDemo,
     //multipleInheritanceDemo,
     //multipleInheritanceWithDefaultInterfaceMemberDemo,
-    dynamicDecoratorCompositionDemo
+    dynamicDecoratorCompositionDemo,
+    staticDecoratorCompositionDemo
 };
 
 

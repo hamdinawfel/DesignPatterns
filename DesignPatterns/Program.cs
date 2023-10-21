@@ -1,4 +1,5 @@
-﻿using DesignPatterns.CharpTopics._1_Reflexion;
+﻿using DesignPatterns.Builder;
+using DesignPatterns.CharpTopics._1_Reflexion;
 using DesignPatterns.CharpTopics._2_BaseKeyword;
 using DesignPatterns.CharpTopics._3_Event;
 using DesignPatterns.CharpTopics._4_ConversionOperator;
@@ -33,6 +34,7 @@ var singletionDemo = new SingletonDemo();
 var singletonMonostateDemo = new SingletonMonostateDemo();
 var perThreadSingletonDemo = new PerThreadSingletonDemo();
 var ambientContextDemo = new AmbientContextDemo();
+
 var myStringBuilderDemo = new MyStringBuilderDemo();
 var multipleInheritanceDemo = new MultipleInheritanceDemo();
 var multipleInheritanceWithDefaultInterfaceMemberDemo = new MultipleInheritanceWithDefaultInterfaceMemberDemo();
@@ -40,6 +42,10 @@ var dynamicDecoratorCompositionDemo = new DetectingDecoratorCyclesDemo();
 var staticDecoratorCompositionDemo = new StaticDecoratorCompositionDemo();
 var decoratorInDIDemo = new DecoratorInDIDemo();
 var decoratorCodingExercice = new DecoratorCodingExercice();
+
+var builderDemo = new BuilderDemo();
+
+
 
 var demos = new List<IDisplayDemo>()
 {
@@ -62,15 +68,17 @@ var demos = new List<IDisplayDemo>()
     //myStringBuilderDemo,
     //multipleInheritanceDemo,
     //multipleInheritanceWithDefaultInterfaceMemberDemo,
-    dynamicDecoratorCompositionDemo,
-    staticDecoratorCompositionDemo,
-    decoratorInDIDemo,
-    decoratorCodingExercice
+    //dynamicDecoratorCompositionDemo,
+    //staticDecoratorCompositionDemo,
+    //decoratorInDIDemo,
+    //decoratorCodingExercice,
+
+    builderDemo
 };
 
 
-//var demo = new DisplayDemo(demos);
-//demo.Display();
+var demo = new DisplayDemo(demos);
+demo.Display();
 
 
 //var executebledemo = new ReflectionDemo();
@@ -80,5 +88,5 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new Demo();
 var executebledemo = new RecusriveDemo();
 
-var executableDemo = new ExecuteDemo(executebledemo);
-executableDemo.Execute();
+//var executableDemo = new ExecuteDemo(executebledemo);
+//executableDemo.Execute();

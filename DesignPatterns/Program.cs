@@ -8,6 +8,7 @@ using DesignPatterns.Decorator.Exercice;
 using DesignPatterns.Decorator.MultipleDecoratorResolver;
 using DesignPatterns.Decorator.StaticDecorator;
 using DesignPatterns.Factories;
+using DesignPatterns.InterviewQuestions;
 using DesignPatterns.Prototype;
 using DesignPatterns.Prototype.CopyConstrator;
 using DesignPatterns.Prototype.DeepCopyInterface;
@@ -68,8 +69,8 @@ var demos = new List<IDisplayDemo>()
 };
 
 
-var demo = new DisplayDemo(demos);
-demo.Display();
+//var demo = new DisplayDemo(demos);
+//demo.Display();
 
 
 //var executebledemo = new ReflectionDemo();
@@ -77,6 +78,7 @@ demo.Display();
 //var executebledemo = new EventDemo();
 //var executebledemo = new ConversionOperatorDemo();
 //var executebledemo = new Demo();
+var executebledemo = new RecusriveDemo();
 
-//var executableDemo = new ExecuteDemo(executebledemo);
-//executableDemo.Execute();
+var executableDemo = new ExecuteDemo(executebledemo);
+executableDemo.Execute();

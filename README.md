@@ -44,3 +44,15 @@ Usage:
   We only do it once
   We provide every consumer creating additional copies
 - Need to take care of lazy instantiationand thread saifty
+
+## Decorator 
+
+Decorator : Adding behavior without altering the class isself
+
+	• A decorator keeps the reference to decorated objects
+	• May or may not proxy over calls
+           Use R# Genarate Delegated Members
+
+	• Exists in a static variation 
+           X<Y<Foo>>
+          Very limited to inability to inhetit from type parameters (Not recomended in c#)

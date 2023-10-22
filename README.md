@@ -1,5 +1,13 @@
 # DesignPatterns
 
+## Builder 
+Builder : When piecewise object construction is complicated provide an API for doing it succintly
+
+- Some objects are simple and can be created in a single constrictor call
+- Other objects require a lot of ceremony to create 
+- Having an object with 10 conscructor parametres is not productive
+- Insead , opt for piecewise construction
+
 ## Factory
 > Factory Design Pattern. A factory is class will create and deliver objects based on the incoming parameters.
 

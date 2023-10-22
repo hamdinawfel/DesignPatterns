@@ -7,6 +7,8 @@ Builder : When piecewise object construction is complicated provide an API for d
 - Other objects require a lot of ceremony to create 
 - Having an object with 10 conscructor parametres is not productive
 - Insead , opt for piecewise construction
+- To make builder fluent return this
+
 
 ## Factory
 > Factory Design Pattern. A factory is class will create and deliver objects based on the incoming parameters.

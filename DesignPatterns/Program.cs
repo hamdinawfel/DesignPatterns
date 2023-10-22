@@ -94,7 +94,8 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new ConversionOperatorDemo();
 //var executebledemo = new Demo();
 //var executebledemo = new RecusriveDemo();
-var executebledemo = new ReverseString();
+//var executebledemo = new ReverseString();
+var executebledemo = new ArrayWithDeffirentTypes();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

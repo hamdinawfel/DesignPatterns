@@ -74,7 +74,7 @@ namespace DesignPatterns.Builder
         {
             var car = CarBuilder.Create()               
                                  .OfType(CarType.Golf)
-                                 .WithWeelSize(40)
+                                 .WithWeelSize(17)
                                  .Build();
 
             Console.WriteLine(car.ToString());

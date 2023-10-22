@@ -44,8 +44,9 @@ var decoratorInDIDemo = new DecoratorInDIDemo();
 var decoratorCodingExercice = new DecoratorCodingExercice();
 
 var builderDemo = new BuilderDemo();
-var stepWiseBuilderDemo = new StepWiseBuilderDemo();
 var fluentBuilderInheritanceWithRecusrsiveGenericsDemo = new FluentBuilderInheritanceWithRecusrsiveGenericsDemo();
+var stepWiseBuilderDemo = new StepWiseBuilderDemo();
+var builderCodingExercise = new BuilderCodingExercise();
 
 
 
@@ -77,7 +78,8 @@ var demos = new List<IDisplayDemo>()
 
     builderDemo,
     fluentBuilderInheritanceWithRecusrsiveGenericsDemo,
-    stepWiseBuilderDemo
+    stepWiseBuilderDemo,
+    builderCodingExercise
 };
 
 

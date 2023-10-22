@@ -96,7 +96,8 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new RecusriveDemo();
 //var executebledemo = new ReverseString();
 //var executebledemo = new ArrayWithDeffirentTypes();
-var executebledemo = new JaggedArray();
+var executebledemo = new GenericListWithDifferentListTypes();
+//var executebledemo = new JaggedArray();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

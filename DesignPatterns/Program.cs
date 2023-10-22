@@ -4,6 +4,7 @@ using DesignPatterns.CharpTopics._2_BaseKeyword;
 using DesignPatterns.CharpTopics._3_Event;
 using DesignPatterns.CharpTopics._4_ConversionOperator;
 using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
+using DesignPatterns.CharpTopics.InterviewQuestions;
 using DesignPatterns.Decorator;
 using DesignPatterns.Decorator.Exercice;
 using DesignPatterns.Decorator.MultipleDecoratorResolver;
@@ -83,8 +84,8 @@ var demos = new List<IDisplayDemo>()
 };
 
 
-var demo = new DisplayDemo(demos);
-demo.Display();
+//var demo = new DisplayDemo(demos);
+//demo.Display();
 
 
 //var executebledemo = new ReflectionDemo();
@@ -92,7 +93,8 @@ demo.Display();
 //var executebledemo = new EventDemo();
 //var executebledemo = new ConversionOperatorDemo();
 //var executebledemo = new Demo();
-var executebledemo = new RecusriveDemo();
+//var executebledemo = new RecusriveDemo();
+var executebledemo = new ReverseString();
 
-//var executableDemo = new ExecuteDemo(executebledemo);
-//executableDemo.Execute();
+var executableDemo = new ExecuteDemo(executebledemo);
+executableDemo.Execute();

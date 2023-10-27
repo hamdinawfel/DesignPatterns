@@ -1,14 +1,25 @@
 ﻿using DesignPatterns.Utils;
+using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DesignPatterns.CharpTopics.InterviewQuestions
 {
 
+// Une method FindSumPair doit retourner un tableau de deux entiers
+//Contenant les indices d'une paire d'entiers dans le tableau dont la somme est k
+//Le premier indice dans le tableax est 0,
+//Le premier entier de votre sortie doit représenter l'indice inférieur.
+//[0,0] doit etre retourné si aucune paire n'est trouvé.
+//Dans le cas ou il existe plusieurs paires possibles dont la somme est égale
+//à la cible.
+//retournez l paire dont l'indice de gauche, privilégiez la paire dont l'indice de droite
+//est le plus bas
 
     public class FindSumPairDemo : IExecuteDemo
     {

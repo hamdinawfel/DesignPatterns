@@ -99,7 +99,8 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new GenericListWithDifferentListTypes();
 //var executebledemo = new JaggedArray();
 //var executebledemo = new ExceptionDemo();
-var executebledemo = new AbtructClassAndVirtuelMethodDemo();
+//var executebledemo = new AbtructClassAndVirtuelMethodDemo();
+var executebledemo = new FindSumPairDemo();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

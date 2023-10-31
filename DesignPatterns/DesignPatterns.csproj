@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.0.0" />
+    <PackageReference Include="JetBrains.Annotations.Redist" Version="7.1.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="NUnit" Version="3.13.3" />
   </ItemGroup>
 

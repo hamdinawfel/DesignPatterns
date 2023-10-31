@@ -11,6 +11,7 @@ using DesignPatterns.Decorator.MultipleDecoratorResolver;
 using DesignPatterns.Decorator.StaticDecorator;
 using DesignPatterns.Factories;
 using DesignPatterns.InterviewQuestions;
+using DesignPatterns.Mediator;
 using DesignPatterns.Prototype;
 using DesignPatterns.Prototype.CopyConstrator;
 using DesignPatterns.Prototype.DeepCopyInterface;
@@ -50,6 +51,10 @@ var stepWiseBuilderDemo = new StepWiseBuilderDemo();
 var builderCodingExercise = new BuilderCodingExercise();
 
 
+var mediatRDemo = new MediatRDemo();
+var mediatorCodingExercise = new MediatorCodingExercise();
+
+
 
 var demos = new List<IDisplayDemo>()
 {
@@ -77,10 +82,13 @@ var demos = new List<IDisplayDemo>()
     //decoratorInDIDemo,
     //decoratorCodingExercice,
 
-    builderDemo,
-    fluentBuilderInheritanceWithRecusrsiveGenericsDemo,
-    stepWiseBuilderDemo,
-    builderCodingExercise
+    //builderDemo,
+    //fluentBuilderInheritanceWithRecusrsiveGenericsDemo,
+    //stepWiseBuilderDemo,
+    //builderCodingExercise,
+
+    //mediatRDemo,
+    mediatorCodingExercise,
 };
 
 

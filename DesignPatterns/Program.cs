@@ -84,13 +84,13 @@ var demos = new List<IDisplayDemo>()
 };
 
 
-//var demo = new DisplayDemo(demos);
-//demo.Display();
+var demo = new DisplayDemo(demos);
+demo.Display();
 
 
 //var executebledemo = new ReflectionDemo();
 //var executebledemo = new BaseKeywordDemo();
-//var executebledemo = new EventDemo();
+//var executebledemo = new EventDemo(); //TODO
 //var executebledemo = new ConversionOperatorDemo();
 //var executebledemo = new Demo();
 //var executebledemo = new RecusriveDemo();
@@ -100,7 +100,8 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new JaggedArray();
 //var executebledemo = new ExceptionDemo();
 //var executebledemo = new AbtructClassAndVirtuelMethodDemo();
-var executebledemo = new FindSumPairDemo();
+//var executebledemo = new FindSumPairDemo();
+//var executebledemo = new LocateUniverseFormilaDemo(); //TODO
 
-var executableDemo = new ExecuteDemo(executebledemo);
-executableDemo.Execute();
+//var executableDemo = new ExecuteDemo(executebledemo);
+//executableDemo.Execute();

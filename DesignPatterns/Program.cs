@@ -12,6 +12,7 @@ using DesignPatterns.Decorator.StaticDecorator;
 using DesignPatterns.Factories;
 using DesignPatterns.InterviewQuestions;
 using DesignPatterns.Mediator;
+using DesignPatterns.NullObject;
 using DesignPatterns.Prototype;
 using DesignPatterns.Prototype.CopyConstrator;
 using DesignPatterns.Prototype.DeepCopyInterface;
@@ -53,6 +54,7 @@ var builderCodingExercise = new BuilderCodingExercise();
 
 var mediatRDemo = new MediatRDemo();
 var mediatorCodingExercise = new MediatorCodingExercise();
+var nullObjectDemo = new NullObjectDemo();
 
 
 
@@ -88,7 +90,9 @@ var demos = new List<IDisplayDemo>()
     //builderCodingExercise,
 
     //mediatRDemo,
-    mediatorCodingExercise,
+    //mediatorCodingExercise,
+
+    nullObjectDemo,
 };
 
 

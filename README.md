@@ -66,3 +66,32 @@ Decorator : Adding behavior without altering the class isself
 	• Exists in a static variation 
            X<Y<Foo>>
           Very limited to inability to inhetit from type parameters (Not recomended in c#)
+
+
+## Mediator 
+
+> Mediator : facilitates communication between others components
+> withou them necessarilly being aware of each other or having direct (reference)
+> access to each other
+
+Motivation:
+
+* components may go in and out of the system at any time
+  Eg: Chatroom
+  Players
+
+* It makes no sens for them to have direct references to one another 
+  Those references may go dead
+
+* Solution : have then all refer to some central comonents that facilates 
+cmmunication
+
+* Create the mediator and have each object in the system refer to it
+Eg in a field
+
+* Mediator engages in bidirectional communication
+with its connected components
+
+* Mediator has functions the components can call
+Components have functions the mediator can call
+  Event processing (Rx) library make communication easier to implement

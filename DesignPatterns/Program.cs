@@ -55,6 +55,7 @@ var builderCodingExercise = new BuilderCodingExercise();
 var mediatRDemo = new MediatRDemo();
 var mediatorCodingExercise = new MediatorCodingExercise();
 var nullObjectDemo = new NullObjectDemo();
+var nullObjectCodingExercise = new NullObjectCodingExercise();
 
 
 
@@ -93,6 +94,7 @@ var demos = new List<IDisplayDemo>()
     //mediatorCodingExercise,
 
     nullObjectDemo,
+    nullObjectCodingExercise,
 };
 
 

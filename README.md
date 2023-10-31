@@ -77,13 +77,15 @@ Decorator : Adding behavior without altering the class isself
 Motivation:
 
 * components may go in and out of the system at any time
-  Eg: Chatroom
-  Players
+  -Eg: Chatroom
+  - Players
 
 * It makes no sens for them to have direct references to one another 
   Those references may go dead
 
-* Solution : have then all refer to some central comonents that facilates 
+Solution:
+
+* have then all refer to some central components that facilatates
 cmmunication
 
 * Create the mediator and have each object in the system refer to it
@@ -93,5 +95,5 @@ Eg in a field
 with its connected components
 
 * Mediator has functions the components can call
-Components have functions the mediator can call
+* Components have functions the mediator can call
   Event processing (Rx) library make communication easier to implement

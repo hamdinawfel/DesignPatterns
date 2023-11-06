@@ -148,10 +148,8 @@ Inherit the algorithm class, providing necessary overrides
 
 > Connecting compnents togher through abstructions
 
-Decpiple abstruction from implementaton
-
-Both can exist as herarcchies
-
-A stronger from of ancapsulation
+* Decpiple abstruction from implementaton
+* Both can exist as herarcchies
+* A stronger from of ancapsulation
 
 

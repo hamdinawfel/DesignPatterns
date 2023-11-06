@@ -123,3 +123,23 @@ so :
 * Dynamic construction possible
    - With associated performance implications
 
+  ## Template Method
+  
+  > allows us to define the skeleton of the algorithm with concrete implementation defined in subclasses
+
+Motivation: 
+* Algorithm can be decomposed into common parts + specifics
+* Strategy pattern does this throught composition
+  High-level algorithm uses an interface
+  Concrete implementations implement the interface
+* Template method does the same thing through inheritance
+  Overall algorithm makes use of abstruct member.
+  Inheritors override the abstract members
+
+so:
+Define an algorithm at a gigh level
+
+Define constituent parts as abstract methods/properties
+
+Inherit the algorithm class, providing necessary overrides
+

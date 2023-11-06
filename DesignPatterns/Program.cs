@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Builder;
+﻿using DesignPatterns.Bridge;
+using DesignPatterns.Builder;
 using DesignPatterns.CharpTopics._1_Reflexion;
 using DesignPatterns.CharpTopics._2_BaseKeyword;
 using DesignPatterns.CharpTopics._3_Event;
@@ -64,6 +65,10 @@ var functionalTemplateMethodDemo = new FunctionalTemplateMethodDemo();
 var templateMethodExercice = new TemplateMethodExercice();
 
 
+var bridgeDemo = new BridgeDemo();
+var bridgeExcerice = new BridgeExcerice();
+
+
 
 var demos = new List<IDisplayDemo>()
 {
@@ -102,9 +107,12 @@ var demos = new List<IDisplayDemo>()
     //nullObjectDemo,
     //nullObjectCodingExercise,
 
-    templateMethodDemo,
-    functionalTemplateMethodDemo,
-    templateMethodExercice
+    //templateMethodDemo,
+    //functionalTemplateMethodDemo,
+    //templateMethodExercice,
+
+    bridgeDemo,
+    bridgeExcerice,
 };
 
 

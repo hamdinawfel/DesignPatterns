@@ -97,3 +97,29 @@ with its connected components
 * Mediator has functions the components can call
 * Components have functions the mediator can call
   Event processing (Rx) library make communication easier to implement
+
+
+  ## Null Object 
+> A no-op object that conforms to the required interface,
+> satisfying a dependency requirement of some other object.
+
+Motivation:
+
+* When component A uses component B, it typically assumes
+that B is non-null
+   - you inject B, not B? or some Option<B>
+   - You do not check for null (?.) on every call
+
+* There is on option of telling A not to use an instance of B 
+   - its use is hard-coded
+
+* Thus , we build a no-op, non functionning inheritor of B and pass it into A
+so :
+*Implement the required interface
+*Rewrite the methods with empty bodies
+  - If method is non void, return default(T)
+  - if these values are ever used, you are in trouble
+* Supploy an instance of null object in place of actual object
+* Dynamic construction possible
+   - With associated performance implications
+

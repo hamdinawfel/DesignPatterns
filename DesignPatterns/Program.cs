@@ -18,6 +18,7 @@ using DesignPatterns.Prototype.CopyConstrator;
 using DesignPatterns.Prototype.DeepCopyInterface;
 using DesignPatterns.Prototype.PrototypeInheritance;
 using DesignPatterns.Singleton;
+using DesignPatterns.TemplateMethod;
 using DesignPatterns.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -58,6 +59,11 @@ var nullObjectDemo = new NullObjectDemo();
 var nullObjectCodingExercise = new NullObjectCodingExercise();
 
 
+var templateMethodDemo = new TemplateMethodDemo();
+var functionalTemplateMethodDemo = new FunctionalTemplateMethodDemo();
+var templateMethodExercice = new TemplateMethodExercice();
+
+
 
 var demos = new List<IDisplayDemo>()
 {
@@ -93,8 +99,12 @@ var demos = new List<IDisplayDemo>()
     //mediatRDemo,
     //mediatorCodingExercise,
 
-    nullObjectDemo,
-    nullObjectCodingExercise,
+    //nullObjectDemo,
+    //nullObjectCodingExercise,
+
+    templateMethodDemo,
+    functionalTemplateMethodDemo,
+    templateMethodExercice
 };
 
 

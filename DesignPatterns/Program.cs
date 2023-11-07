@@ -6,6 +6,7 @@ using DesignPatterns.CharpTopics._3_Event;
 using DesignPatterns.CharpTopics._4_ConversionOperator;
 using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
 using DesignPatterns.CharpTopics.InterviewQuestions;
+using DesignPatterns.Composite;
 using DesignPatterns.Decorator;
 using DesignPatterns.Decorator.Exercice;
 using DesignPatterns.Decorator.MultipleDecoratorResolver;
@@ -53,20 +54,19 @@ var fluentBuilderInheritanceWithRecusrsiveGenericsDemo = new FluentBuilderInheri
 var stepWiseBuilderDemo = new StepWiseBuilderDemo();
 var builderCodingExercise = new BuilderCodingExercise();
 
-
 var mediatRDemo = new MediatRDemo();
 var mediatorCodingExercise = new MediatorCodingExercise();
 var nullObjectDemo = new NullObjectDemo();
 var nullObjectCodingExercise = new NullObjectCodingExercise();
 
-
 var templateMethodDemo = new TemplateMethodDemo();
 var functionalTemplateMethodDemo = new FunctionalTemplateMethodDemo();
 var templateMethodExercice = new TemplateMethodExercice();
 
-
 var bridgeDemo = new BridgeDemo();
 var bridgeExcerice = new BridgeExcerice();
+
+var geometricShapes = new GeometricShapes();
 
 
 
@@ -111,8 +111,10 @@ var demos = new List<IDisplayDemo>()
     //functionalTemplateMethodDemo,
     //templateMethodExercice,
 
-    bridgeDemo,
-    bridgeExcerice,
+    //bridgeDemo,
+    //bridgeExcerice,
+
+    geometricShapes,
 };
 
 

@@ -5,7 +5,9 @@ using DesignPatterns.CharpTopics._2_BaseKeyword;
 using DesignPatterns.CharpTopics._3_Event;
 using DesignPatterns.CharpTopics._4_ConversionOperator;
 using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
+using DesignPatterns.CharpTopics.AdvancedTopics.InParameters;
 using DesignPatterns.CharpTopics.InterviewQuestions;
+using DesignPatterns.CharpTopics.Performance;
 using DesignPatterns.Composite;
 using DesignPatterns.Decorator;
 using DesignPatterns.Decorator.Exercice;
@@ -67,59 +69,61 @@ var bridgeDemo = new BridgeDemo();
 var bridgeExcerice = new BridgeExcerice();
 
 var geometricShapes = new GeometricShapes();
+var neuralNetworks = new NeuralNetworks();
 
 
 
 var demos = new List<IDisplayDemo>()
 {
-    //pointFactroyDemo,
-    //trackingThemeFactoryDemo,
-    //hotDrinkMachineDemo,
-    //personFactoryDemo,
-    //creditCardDemo,
+    pointFactroyDemo,
+    trackingThemeFactoryDemo,
+    hotDrinkMachineDemo,
+    personFactoryDemo,
+    creditCardDemo,
 
-    //prototypeCopyConstratorDemo,
-    //prototypeWithDeepCopyInterfaceDemo,
-    //prototypeInheritanceDemo,
-    //prototypeExecrice,
+    prototypeCopyConstratorDemo,
+    prototypeWithDeepCopyInterfaceDemo,
+    prototypeInheritanceDemo,
+    prototypeExecrice,
 
-    //singletionDemo,
-    //singletonMonostateDemo,
-    //perThreadSingletonDemo,
-    //ambientContextDemo,
+    singletionDemo,
+    singletonMonostateDemo,
+    perThreadSingletonDemo,
+    ambientContextDemo,
 
-    //myStringBuilderDemo,
-    //multipleInheritanceDemo,
-    //multipleInheritanceWithDefaultInterfaceMemberDemo,
-    //dynamicDecoratorCompositionDemo,
-    //staticDecoratorCompositionDemo,
-    //decoratorInDIDemo,
-    //decoratorCodingExercice,
+    myStringBuilderDemo,
+    multipleInheritanceDemo,
+    multipleInheritanceWithDefaultInterfaceMemberDemo,
+    dynamicDecoratorCompositionDemo,
+    staticDecoratorCompositionDemo,
+    decoratorInDIDemo,
+    decoratorCodingExercice,
 
-    //builderDemo,
-    //fluentBuilderInheritanceWithRecusrsiveGenericsDemo,
-    //stepWiseBuilderDemo,
-    //builderCodingExercise,
+    builderDemo,
+    fluentBuilderInheritanceWithRecusrsiveGenericsDemo,
+    stepWiseBuilderDemo,
+    builderCodingExercise,
 
-    //mediatRDemo,
-    //mediatorCodingExercise,
+    mediatRDemo,
+    mediatorCodingExercise,
 
-    //nullObjectDemo,
-    //nullObjectCodingExercise,
+    nullObjectDemo,
+    nullObjectCodingExercise,
 
-    //templateMethodDemo,
-    //functionalTemplateMethodDemo,
-    //templateMethodExercice,
+    templateMethodDemo,
+    functionalTemplateMethodDemo,
+    templateMethodExercice,
 
-    //bridgeDemo,
-    //bridgeExcerice,
+    bridgeDemo,
+    bridgeExcerice,
 
     geometricShapes,
+    neuralNetworks,
 };
 
 
-var demo = new DisplayDemo(demos);
-demo.Display();
+//var demo = new DisplayDemo(demos);
+//demo.Display();
 
 
 //var executebledemo = new ReflectionDemo();
@@ -136,6 +140,10 @@ demo.Display();
 //var executebledemo = new AbtructClassAndVirtuelMethodDemo();
 //var executebledemo = new FindSumPairDemo();
 //var executebledemo = new LocateUniverseFormilaDemo(); //TODO
+//var executebledemo = new InParametresDemo();
+var executebledemo = new PreventBoxingAndUnbosing();
 
-//var executableDemo = new ExecuteDemo(executebledemo);
-//executableDemo.Execute();
+var executableDemo = new ExecuteDemo(executebledemo);
+executableDemo.Execute();
+
+

@@ -141,7 +141,9 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new FindSumPairDemo();
 //var executebledemo = new LocateUniverseFormilaDemo(); //TODO
 //var executebledemo = new InParametresDemo();
-var executebledemo = new PreventBoxingAndUnbosing();
+//var executebledemo = new PreventBoxingAndUnbosing();
+//var executebledemo = new ReplaceDigits();
+var executebledemo = new MatrixMultiplication();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

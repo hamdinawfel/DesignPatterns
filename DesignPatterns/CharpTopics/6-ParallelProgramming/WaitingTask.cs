@@ -41,7 +41,7 @@ namespace DesignPatterns.CharpTopics._6_ParallelProgramming
             //Task.WaitAll(task1, task2);
             //Task.WaitAny(task1, task2);
             //Task.WaitAll(new[] { task1, task2 } );
-            Task.WaitAll(new[] { task1, task2 }, 4000 );
+            Task.WaitAll(new[] { task1, task2 }, 4000);
 
             Console.WriteLine("Tasks status");
             Console.WriteLine($"task 1 status : {task1.Status}");

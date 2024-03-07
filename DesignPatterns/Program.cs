@@ -151,7 +151,8 @@ var demos = new List<IDisplayDemo>()
 // ---------------- Parallel Programming DEMOS ----------------//
 //var executebledemo = new CreateAndStartTasks();
 //var executebledemo = new CancelTask();
-var executebledemo = new WaitingTask();
+//var executebledemo = new WaitingTask();
+var executebledemo = new TaskExceptionHandler();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

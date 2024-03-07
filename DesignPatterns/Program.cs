@@ -143,9 +143,14 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new LocateUniverseFormilaDemo(); //TODO
 //var executebledemo = new InParametresDemo();
 //var executebledemo = new PreventBoxingAndUnbosing();
+
+// ---------------- Performance DEMOS ----------------//
 //var executebledemo = new ReplaceDigits();
 //var executebledemo = new MatrixMultiplication();
-var executebledemo = new CreateAndStartTasks();
+
+// ---------------- Parallel Programming DEMOS ----------------//
+//var executebledemo = new CreateAndStartTasks();
+var executebledemo = new CancelTask();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

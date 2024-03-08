@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.CharpTopics._6_ParallelProgramming
 {
-    public class InterlockedOperations : IExecuteDemo
+    public class CriticalSectionsWithInterlocked : IExecuteDemo
     {
         public class BanckAccout
         {
+
             private int balence;
+
             public int Balence
-            {   get { return balence; }
-                private set { balence = value; } 
+            {
+                get { return balence; }
+                private set { balence = value; }
             }
 
             public void Deposite(int amount)

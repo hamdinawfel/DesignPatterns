@@ -6,6 +6,7 @@ using DesignPatterns.CharpTopics._3_Event;
 using DesignPatterns.CharpTopics._4_ConversionOperator;
 using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
 using DesignPatterns.CharpTopics._6_ParallelProgramming;
+using DesignPatterns.CharpTopics._6_ParallelProgramming.ConcurrentCollections;
 using DesignPatterns.CharpTopics.AdvancedTopics.InParameters;
 using DesignPatterns.CharpTopics.InterviewQuestions;
 using DesignPatterns.CharpTopics.Performance;
@@ -160,7 +161,11 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new LockRecursionDemo();
 //var executebledemo = new CriticalSectionsWithMutex();
 //var executebledemo = new BankAccountTransferWithMutexDemo();
-var executebledemo = new ReadWriteLocks();
+//var executebledemo = new ReadWriteLocks();
+
+var executebledemo = new ConcurrentDictionaryDemo();
+
+
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

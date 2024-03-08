@@ -154,7 +154,8 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new WaitingTask();
 //var executebledemo = new TaskExceptionHandler();
 
-var executebledemo = new CriticalSectionsWithLock();
+//var executebledemo = new CriticalSectionsWithLock();
+var executebledemo = new InterlockedOperations();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

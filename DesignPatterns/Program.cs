@@ -163,7 +163,10 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new BankAccountTransferWithMutexDemo();
 //var executebledemo = new ReadWriteLocks();
 
-var executebledemo = new ConcurrentDictionaryDemo();
+//var executebledemo = new ConcurrentDictionaryDemo();
+//var executebledemo = new ConcurrentQueueDemo();
+//var executebledemo = new ConcurrentStackDemo();
+var executebledemo = new ConcurrentBagDemo();
 
 
 

@@ -11,7 +11,6 @@ namespace DesignPatterns.CharpTopics._6_ParallelProgramming
     {
         public class BanckAccout
         {
-
             private int balence;
 
             public int Balence

@@ -157,7 +157,9 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new CriticalSectionsWithLock();
 //var executebledemo = new CriticalSectionsWithInterlocked();
 //var executebledemo = new CriticalSectionsWithSpinlock();
-var executebledemo = new LockRecursionDemo();
+//var executebledemo = new LockRecursionDemo();
+//var executebledemo = new CriticalSectionsWithMutex();
+var executebledemo = new BankAccountTransferWithMutexDemo();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

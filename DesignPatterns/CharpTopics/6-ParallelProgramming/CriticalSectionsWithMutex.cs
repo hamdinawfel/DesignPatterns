@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.CharpTopics._6_ParallelProgramming
 {
-    internal class CriticalSectionsWithSpinlock : IExecuteDemo
+    internal class CriticalSectionsWithMutex : IExecuteDemo
     {
         public class BanckAccout
         {
@@ -25,7 +25,7 @@ namespace DesignPatterns.CharpTopics._6_ParallelProgramming
 
             var bankAccount = new BanckAccout();
 
-            SpinLock spinLock = new SpinLock();
+            Mutex mutex = new Mutex();
 
             for (var i = 0; i < 10; i++)
             {
@@ -33,16 +33,16 @@ namespace DesignPatterns.CharpTopics._6_ParallelProgramming
                 {
                     for (var i = 0; i < 1000; i++)
                     {
-                        bool isLockTaken = false;
+                        bool haveLock = mutex.WaitOne();
                         try
                         {
-                            spinLock.Enter(ref isLockTaken);
+
                             bankAccount.Deposite(100);
                         }
                         finally
                         {
-                            if(isLockTaken)
-                               spinLock.Exit();
+                            if (haveLock)
+                                mutex.ReleaseMutex();
                         }
                     }
                 }));
@@ -51,16 +51,16 @@ namespace DesignPatterns.CharpTopics._6_ParallelProgramming
                 {
                     for (var i = 0; i < 1000; i++)
                     {
-                        bool isLockTaken = false;
+                        bool haveLock = mutex.WaitOne();
                         try
                         {
-                            spinLock.Enter(ref isLockTaken);
+
                             bankAccount.Withdraw(100);
                         }
                         finally
                         {
-                            if (isLockTaken)
-                                spinLock.Exit();
+                            if (haveLock)
+                                mutex.ReleaseMutex();
                         }
                     }
                 }));

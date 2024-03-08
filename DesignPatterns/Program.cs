@@ -152,7 +152,9 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new CreateAndStartTasks();
 //var executebledemo = new CancelTask();
 //var executebledemo = new WaitingTask();
-var executebledemo = new TaskExceptionHandler();
+//var executebledemo = new TaskExceptionHandler();
+
+var executebledemo = new CriticalSectionsWithLock();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

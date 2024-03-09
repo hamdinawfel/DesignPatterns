@@ -166,9 +166,8 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new ConcurrentDictionaryDemo();
 //var executebledemo = new ConcurrentQueueDemo();
 //var executebledemo = new ConcurrentStackDemo();
-var executebledemo = new ConcurrentBagDemo();
-
-
+//var executebledemo = new ConcurrentBagDemo();
+var executebledemo = new BlockingCollectionDemo();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

@@ -7,6 +7,7 @@ using DesignPatterns.CharpTopics._4_ConversionOperator;
 using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
 using DesignPatterns.CharpTopics._6_ParallelProgramming;
 using DesignPatterns.CharpTopics._6_ParallelProgramming.ConcurrentCollections;
+using DesignPatterns.CharpTopics._6_ParallelProgramming.ParallelLinq;
 using DesignPatterns.CharpTopics._6_ParallelProgramming.ParallelLoops;
 using DesignPatterns.CharpTopics._6_ParallelProgramming.TaskCoordination;
 using DesignPatterns.CharpTopics.AdvancedTopics.InParameters;
@@ -177,7 +178,11 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new CountdownEventDemo();
 //var executebledemo = new ResetEventSlimDemo();
 //var executebledemo = new SemaphoreSlimDemo();
-var executebledemo = new LoopsDemo();
+//var executebledemo = new LoopsDemo();
+//var executebledemo = new AsParallelDemo();
+//var executebledemo = new CancelationDemo();
+//var executebledemo = new MergeOptionDemo();
+var executebledemo = new CustomAggregationDemo();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

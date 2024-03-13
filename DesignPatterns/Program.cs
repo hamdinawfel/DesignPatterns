@@ -7,6 +7,7 @@ using DesignPatterns.CharpTopics._4_ConversionOperator;
 using DesignPatterns.CharpTopics._5_DefaultInterfaceMembers;
 using DesignPatterns.CharpTopics._6_ParallelProgramming;
 using DesignPatterns.CharpTopics._6_ParallelProgramming.ConcurrentCollections;
+using DesignPatterns.CharpTopics._6_ParallelProgramming.ParallelLoops;
 using DesignPatterns.CharpTopics._6_ParallelProgramming.TaskCoordination;
 using DesignPatterns.CharpTopics.AdvancedTopics.InParameters;
 using DesignPatterns.CharpTopics.InterviewQuestions;
@@ -174,7 +175,9 @@ var demos = new List<IDisplayDemo>()
 //var executebledemo = new ChildTask();
 //var executebledemo = new BarrierDemo();
 //var executebledemo = new CountdownEventDemo();
-var executebledemo = new ResetEventSlimDemo();
+//var executebledemo = new ResetEventSlimDemo();
+//var executebledemo = new SemaphoreSlimDemo();
+var executebledemo = new LoopsDemo();
 
 var executableDemo = new ExecuteDemo(executebledemo);
 executableDemo.Execute();

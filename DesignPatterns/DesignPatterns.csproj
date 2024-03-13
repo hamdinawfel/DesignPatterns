@@ -28,4 +28,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CharpTopics\6-ParallelProgramming\Asyncronous\" />
+  </ItemGroup>
+
 </Project>
